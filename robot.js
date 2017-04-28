@@ -40,7 +40,9 @@ var robot = {
 var action = function (cmd) {
   if (cmd.startsWith('PLACE ')) {
     var pos = cmd.split(' ')[1].split(',')
-    if (pos.length == 3 && (pos[0] >= 0 && pos[0] <= max_x) && (pos[1] >= 0 && pos[1] <= max_y)) {
+    if (pos.length == 3 && Number.isInteger(parseInt(pos[0])) && Number.isInteger(parseInt(pos[1]))
+      && ['NORTH', 'SOUTH', 'WEST', 'EAST'].indexOf(pos[2]) != -1
+      && (pos[0] >= 0 && pos[0] <= max_x) && (pos[1] >= 0 && pos[1] <= max_y)) {
       robot.x = parseInt(pos[0])
       robot.y = parseInt(pos[1]);
       robot.f = pos[2];
