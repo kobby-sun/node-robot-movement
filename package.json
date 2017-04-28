@@ -1,0 +1,17 @@
+{
+  "name": "node-robot-movement",
+  "description": "Robot Movement",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "robot.js",
+  "scripts": {
+    "start": "node robot.js"
+  },
+  "dependencies": {
+    "prompt": "1.0.0"
+  },
+  "engines": {
+    "node": "5.10.1",
+    "npm": "3.8.3"
+  }
+}
